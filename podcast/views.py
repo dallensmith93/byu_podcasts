@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Podcast, Article
+from .models import Podcast, Article, AboutUs
 
 
 def podcast_list(request):
@@ -14,6 +14,10 @@ def article_list(request):
 def article_detail(request, pk):
     article = get_object_or_404(Article, pk=pk)
     return render(request, 'podcast/article_detail.html', {'article': article})
+
+def about_us(request):
+    about_content = AboutUs.objects.first()
+    return render(request, 'podcast/aboutus.html', {'about': about_content})
 
 def contact_us(request):
     return render(request, 'podcast/contact_us.html')

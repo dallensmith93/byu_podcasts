@@ -1,0 +1,233 @@
+
+
+{% block title %}About Us - The Brigham Bros Podcast{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+          /* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+
+
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Align brand, links, and search bar */
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(90deg, #003366, #00509e); /* Gradient background */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Spacing between links */
+    margin: 0 auto; /* Center the navigation links */
+    padding: 0;
+}
+
+.navbar-links li {
+    display: inline-block;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffcc00; /* Highlight color */
+}
+
+/* Search Bar Styling */
+.navbar-search {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between input and button */
+}
+
+.search-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 2px solid #00509e;
+    border-radius: 5px 0 0 5px; /* Rounded corners */
+    outline: none;
+}
+
+.search-button {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .navbar-search {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .search-input {
+        flex-grow: 1;
+        width: 80%;
+    }
+}
+    .about-container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-family: 'Arial', sans-serif;
+        color: #333;
+    }
+    
+    .about-container h1 {
+        font-size: 2.5rem;
+        color: #003366;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .about-container h2 {
+        font-size: 1.8rem;
+        color: #00509e;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .about-container p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    
+    .about-container a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .about-container a:hover {
+        text-decoration: underline;
+    }
+</style>
+    <title>About Us</title>
+    <div class="about-container">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="/" class="navbar-brand">The Brigham Bros Podcast</a>
+                <ul class="navbar-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/articles/">Articles</a></li>
+                    <li><a href="/contact/">Contact Us</a></li>
+                    <li><a href="/about/">About Us</a></li> <!-- New About Us link -->
+                </ul>
+                 <!-- Search Bar -->
+                 <form action="/search/" method="get" class="navbar-search">
+                    <input type="text" name="q" placeholder="Search..." class="search-input">
+                    <button type="submit" class="search-button">Search</button>
+                </form>
+            </div>
+        </nav>
+        <h1>About Us</h1>
+        <p>
+            Welcome to <strong>The Brigham Bros Podcast</strong>, your source for insightful discussions, entertaining stories, and engaging conversations. 
+            We are passionate about delivering high-quality content that inspires, informs, and connects with our audience.
+        </p>
+        <p>
+            Whether it's the latest trends, timeless topics, or stories that spark your curiosity, 
+            <strong>The Brigham Bros Podcast</strong> is here to make your day a little brighter.
+        </p>
+        <h2>Our Mission</h2>
+        <p>
+            Our mission is to build a community where ideas flow freely, creativity thrives, and meaningful conversations happen. 
+            We aim to be a trusted voice in podcasting, offering content that resonates with listeners of all backgrounds.
+        </p>
+        <h1>{{ about.title }}</h1>
+         <p>{{ about.content }}</p>
+
+        <h2>Contact Us</h2>
+        <p>If you'd like to connect, <a href="/contact/">click here to reach out</a>. We'd love to hear from you!</p>
+    </div>
+</head>
+<body>
+    
+</body>
+</html>
+
+{% endblock %}

@@ -100,35 +100,6 @@ footer {
     bottom: 0;
     width: 100%;
 }
-.carousel {
-    display: flex;
-    overflow-x: scroll;
-    gap: 10px;
-    padding: 10px;
-    background-color: #eaeaea;
-}
-
-.carousel-item {
-    flex: 0 0 auto;
-    width: 300px;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.carousel-item h3 {
-    font-size: 18px;
-    margin-top: 10px;
-}
 /* Navbar Styling */
 .navbar {
     display: flex;
@@ -248,6 +219,22 @@ footer {
     <header>
         <h1>{{ article.title }}</h1>
     </header>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-brand">The Brigham Bros Podcast</a>
+            <ul class="navbar-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/articles/">Articles</a></li>
+                <li><a href="/contact/">Contact Us</a></li>
+                <li><a href="/about/">About Us</a></li> <!-- New About Us link -->
+            </ul>
+             <!-- Search Bar -->
+             <form action="/search/" method="get" class="navbar-search">
+                <input type="text" name="q" placeholder="Search..." class="search-input">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+    </nav>
     <div class="container">
         <img src="{{ article.image.url }}" alt="{{ article.title }}">
         <p>{{ article.content }}</p>

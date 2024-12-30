@@ -10,6 +10,7 @@ urlpatterns = [
     path('articles/', views.article_list, name='article_list'),
     path('articles/<int:pk>/', views.article_detail, name='article_detail'),
     path('contact/', views.contact_us, name='contact_us'),
+    path('about/', views.about_us, name='about_us'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
